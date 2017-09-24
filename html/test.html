@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf8">
+  <meta name="description" content="検索結果に反映されるページの説明文">
+  <!--<link rel="shortcut icon" href="favicon.ico"/>-->
+  <title>タイトル</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!--グローバル属性 idは一つ classは複数ある要素
+  header:
+  footer:
+  nav: ナビゲーション
+  article: 独立のコンテンツ
+  aside: 副次的なコンテンツ
+  section: 意味の塊で情報を整理する見出し
+  h1 - h6:セクションの中の見出し。
+  p: 段落
+  hr: 水平線
+  pre: 改行や字下げを保持
+  blockquote: 引用
+  div: スタイリング-->
+  <header><nav>ホーム</nav></header>
+  <section>
+    <article>
+      <h1>Hello</h1>
+      <p id="message">こんにちは</p>
+      <p class="message active">こんにちは</p>
+      <div style="background: yellow;"><hr>
+        <p class="message" style="background:orange;">こんにちは</p>
+        <pre>
+          どうして
+           こんなに
+            はひふへほ
+        </pre>
+      </div>
+    </article>
+  </section>
+  <section>
+    <!-- ol(ordered list) / ul(unordered list) / li (list item)
+    dl(definition list) / dt(definition term) / dd (definition description)-->
+    <h1 id="stuff">材料<p><img src="iam.jpg" width="150" height="150" alt="iam"></p></h1>
+    <ul>
+      <li class="list"><p><img src="deslabo.jpg" width="150" height="150" alt="iam"></p></li>
+      <li class="list"><p><img src="syslabo.jpg" width="150" height="150" alt="iam"></p></li>
+      <li class="list"><p><img src="essay.jpg" width="150" height="150" alt="iam"></p></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ul>
+    <h2>手順</h2>
+    <ol>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ol>
+    <h2>定義</h2>
+    <dl>
+      <dt>定義１</dt>
+      <dd>定義１の定義はこちら</dd>
+    </dl>
+  </section>
+  <section><!--table thead tbody tr:table row th:table header td:table header-->
+    <table>
+      <thead>
+        <tr><td>ヘッド１</td><td>ヘッド２</td></tr>
+      </thead>
+      <tbody>
+        <tr><td>ボディ１－１</td><td>ボディ１－２</td></tr>
+        <tr><td>ボディ２－１</td><td>ボディ２－２</td></tr>
+        <tr><td colspan="2">ボディ３なのですよう。</td></tr>
+      </tbody>
+    </table>
+      <!--
+      form action: どこに送るか？ method: get / post
+      input
+        text
+        submit
+        password
+        hidden
+      checkbox, radio label
+      html5 type:email number date カテゴリー:分類 コンテンツモデル:カテゴリのタグ
+      トランスペアレント：親要素のコンテンツモデルを使ってね
+数値文字参照、文字実体参照
+      -->
+      <p>文字参照&lt;p&gt;タグが表示できる</p>
+      <p>ここから先はフォーム</p>
+      <form action="survey.php method="post" novalidate>
+        <p>メアド：<input type="email" name="email" required></p>
+        <p>料金：<input type="number" name="price"></p>
+        <p>誕生日：<input type="date" name="birthday"></p>
+        <p>メールアドレス：<input type="text" name="email" size="50" maxlength="5" value="abc&quot;文字参照使用&quot;さらに&amp"></p>
+        <p>メールアドレス：<input type="text" name="email" size="50" maxlength="5" placeholder="please enter email"></p>
+        <p>ログイン：<input type="password" name="password" size="20" maxlength="8" placeholder="please enter password"></p>
+        <input type="hidden" name="user_id" value="23434">
+        <p>
+          コメント：
+          <textarea name="comment" cols="40" rows="5">初期値</textarea>
+        </p>
+        <p>
+          Phone:
+          <label style="background: gold;"><input type="checkbox" name="phone" value="android" checked>Android</input></label>
+          <input type="checkbox" name="phone" value="iphone" id="iphoneid"><label style="background: gold;" for="iphoneid">iPhone</label></input>
+        </p>
+        <p>
+          Color:
+          <input type="radio" name="color" value="red" checked>Red</input>
+          <input type="radio" name="color" value="blue">Blue</input>
+        </p>
+        <p>
+          City:
+          <select name="city">
+            <option value="tokyo">TOKYO</option>
+            <option value="osaka" selected>OSAKA</option>
+            <option value="nagoya">NAGOYA</option>
+            <option value="kyoto">KYOTO</option>
+          </select>
+        </p>
+        <p>
+          City:
+          <select name="city" multiple size="3">
+            <option value="tokyo">TOKYO</option>
+            <option value="osaka" selected>OSAKA</option>
+            <option value="nagoya">NAGOYA</option>
+            <option value="kyoto">KYOTO</option>
+          </select>
+        </p>
+        <p><input type="submit" value="送信" disabled></p>
+        <p><button type="submit"><strong>よりリッチ</strong>な送信ボタン！</p>
+        <p><button type="button">さらに処理もする</p>
+      </form>
+  </section>
+  <section>
+    <h1>段落</h1>
+    <p>段落１の<br>改行を<string>みっちり</string>勉強する</p>
+    <p>コツは<span style="color: gold; background: white;"><a href="#stuff">卵</a></span>を<a href="more.html">持つように</a></p>
+
+  </section>
+  <aside></aside>
+  <footer>これはフィクションです。</footer>
+  <script>
+  var i = 0;
+  while (i < 10) {
+    console.log(i);
+    i++;
+  }
+  </script>
+</body>
+</html>

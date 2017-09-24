@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf8">
+  <meta name="description" content="検索結果に反映されるページの説明文">
+  <!--<link rel="shortcut icon" href="favicon.ico"/>-->
+  <title>もあ！</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!--グローバル属性 idは一つ classは複数ある要素
+  header:
+  footer:
+  nav: ナビゲーション
+  article: 独立のコンテンツ
+  aside: 副次的なコンテンツ
+  section: 意味の塊で情報を整理する見出し
+  h1 - h6:セクションの中の見出し。
+  p: 段落
+  hr: 水平線
+  pre: 改行や字下げを保持
+  blockquote: 引用
+  div: スタイリング-->
+  <header><nav>モアだよ</nav></header>
+  <section>
+    <article>
+      <h1>Hello</h1>
+      <p id="message">こんにちは</p>
+      <p class="message active">こんにちは</p>
+      <div style="background: yellow;"><hr>
+        <p class="message" style="background:orange;">こんにちは</p>
+        <pre>
+          どうして
+           こんなに
+            はひふへほ
+        </pre>
+      </div>
+    </article>
+  </section>
+  <section>
+    <!-- ol(ordered list) / ul(unordered list) / li (list item)
+    dl(definition list) / dt(definition term) / dd (definition description)-->
+    <h1>材料</h1>
+    <ul>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ul>
+    <h2>手順</h2>
+    <ol>
+      <li class="list"></li>
+      <li class="list"></li>
+    </ol>
+    <h2>定義</h2>
+    <dl>
+      <dt>定義１</dt>
+      <dd>定義１の定義はこちら</dd>
+    </dl>
+  </section>
+  <section>
+    <h1>段落</h1>
+    <p>段落１の<br>改行を<string>みっちり</string>勉強する</p>
+    <p>コツは<span style="color: gold; background: white;"><a href="#">卵</a></span>を<a href="more.html">持つように</a></p>
+  </section>
+  <aside></aside>
+  <footer>これはフィクションです。</footer>
+  <script>
+  var i = 0;
+  while (i < 10) {
+    console.log(i);
+    i++;
+  }
+  </script>
+</body>
+</html>
